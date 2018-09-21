@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlms:th="http://www.thymeleaf.org" xmlns:xmlms="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/javascript" th:src="@{/js/login.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+<h2>Create New User</h2>
+
+<form class="modal-content animate" action="#" th:action="@{/dashBoard}" th:object="${users}" method="post">
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+
+            <input type="text" th:field="*{userName}" />
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password"  />
+
+            <button type="submit">Login</button>
+
+        </div>
+
+    </form>
+</body>
+</html>
